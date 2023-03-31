@@ -50,7 +50,7 @@ jobs:
         
     - name: angular install, build, and test
       run: |
-        npm install @angular/cdk@12.2.13
+        npm install survey-creator-angular --save
         npm run build --if-present
         npm run test --if-present
 
