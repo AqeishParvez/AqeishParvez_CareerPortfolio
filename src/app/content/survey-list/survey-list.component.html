@@ -1,0 +1,14 @@
+<div class="survey-list" *ngIf="isLoggedIn">
+    <ul *ngFor="let item of items">
+        <li key={item.id}>
+            <a [routerLink]="['/edit-survey']" [queryParams]="{ id: item.id }">{{item.name}}</a>
+            <a class="edit-link" [routerLink]="['/edit-survey']" *ngIf="isLoggedIn" [queryParams]="{ id: item.id }">
+              <button type="button" class="btn btn--primary">
+                Edit
+              </button>
+            </a>
+            <button type="button" class="btn btn--danger" *ngIf="isLoggedIn" (click)="removeSurvey(item.id)">Remove</button>
+          </li>
+    </ul>
+    <button class="add-btn" type="button" (click)="addNewSurvey()">Add New Survey</button>
+</div>

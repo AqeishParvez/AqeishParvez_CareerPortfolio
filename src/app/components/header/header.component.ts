@@ -14,13 +14,22 @@ export class HeaderComponent implements OnInit {
   constructor(private tokenStorageService: TokenStorageService){}
 
   ngOnInit(): void{
-    
-    this.isLoggedIn = !!this.tokenStorageService.getToken(); // !! means if it exists it's true otherwise false
 
-    if(this.isLoggedIn){
+    if(this.tokenStorageService.getToken()==undefined){
+      this.isLoggedIn = false;
+    }else{
+      this.isLoggedIn = true;
+      console.log(this.tokenStorageService.getToken());
       const user = this.tokenStorageService.getUser();
       this.username = user.username;
     }
+    
+    // this.isLoggedIn = !!this.tokenStorageService.getToken(); // !! means if it exists it's true otherwise false
+
+    // if(this.isLoggedIn){
+    //   const user = this.tokenStorageService.getUser();
+    //   this.username = user.username;
+    // }
   }
 
   logout(): void {

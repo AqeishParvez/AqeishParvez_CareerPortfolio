@@ -7,6 +7,9 @@ import { ContactComponent } from './content/contact/contact.component';
 import { HomeComponent } from './content/home/home.component';
 import { ProjectsComponent } from './content/projects/projects.component';
 import { ServicesComponent } from './content/services/services.component';
+import { SurveyCreatorWidgetComponent } from './content/survey-creator-widget/survey-creator-widget.component';
+import { SurveyCreatorComponent } from './content/survey-creator/survey-creator.component';
+import { SurveyListComponent } from './content/survey-list/survey-list.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch:'full'},
@@ -17,6 +20,9 @@ const routes: Routes = [
   {path: 'services', component: ServicesComponent },
   {path: 'login', component: LoginComponent },
   {path: 'register', component: RegisterComponent },
+  {path: 'survey-creator', component: SurveyCreatorComponent },
+  {path: 'survey-list', component: SurveyListComponent },
+  {path: 'edit-survey', component: SurveyCreatorWidgetComponent },  
 
 ];
 
