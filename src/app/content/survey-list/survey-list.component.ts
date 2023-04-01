@@ -32,6 +32,11 @@ export class SurveyListComponent {
   }
   ngOnInit() {
     this.isLoggedIn = !!this.tokenStorageService.getToken();
+
+    if(this.isLoggedIn==false){
+      this.router.navigate(["/login"]);
+    }
+
     getSurveyItems((currentItems) => {
       this.items = currentItems;
     });
