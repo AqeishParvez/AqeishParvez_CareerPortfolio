@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1>Add Survey</h1>
+
+            <!-- Message Area -->
+            <div class="alert alert-danger" *ngIf="!isSuccessful">
+                {{ errorMessage }}
+            </div>
+
+
+
+            <form class="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" >
+                
+              
+                <div class="form-group">
+                    <label for="nameTextField">Survey Title</label>
+                    <input type="text" class="form-control"
+                    [(ngModel)]="form.name" #name="ngModel"
+                    id="nameTextField"
+                    placeholder="Enter the Survey Title"
+                    name="name"                     
+                    required>
+
+                    <div *ngIf="name.errors?.['required'] && f.submitted">Survey Title is Required</div>
+
+                </div>
+
+
+                <div class="form-group">
+                    <label for="publishedTextField">surveyId</label>
+                    <input type="text" class="form-control"
+                    id="publishedTextField"
+                    placeholder="Enter the survey Id For Test Purposes"
+                    [(ngModel)]="form.surveyId" #surveyId="ngModel"
+                    name="surveyId"                     
+                    required>
+                  
+                    <div *ngIf="surveyId.errors?.['required'] && f.submitted">Survey Id is Required</div>
+
+                </div>
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit</button>
+                
+                    <a href="/survey/list" class="btn btn-warning">
+                        <i class="fas fa-undo"></i> Cancel</a>
+
+            </form>
+        </div>
+
+    </div>
+</div>

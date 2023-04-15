@@ -10,6 +10,9 @@ import { ServicesComponent } from './content/services/services.component';
 import { SurveyCreatorWidgetComponent } from './content/survey-creator-widget/survey-creator-widget.component';
 import { SurveyCreatorComponent } from './content/survey-creator/survey-creator.component';
 import { SurveyListComponent } from './content/survey-list/survey-list.component';
+import { SurveysListComponent } from './content/surveys/list/list.component';
+import { SurveysAddComponent } from './content/surveys/add/add.component';
+import { SurveysEditComponent } from './content/surveys/edit/edit.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch:'full'},
@@ -22,7 +25,10 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent },
   {path: 'survey-creator', component: SurveyCreatorComponent },
   {path: 'survey-list', component: SurveyListComponent },
-  {path: 'edit-survey', component: SurveyCreatorWidgetComponent },  
+  {path: 'edit-survey', component: SurveyCreatorWidgetComponent },
+  {path: 'survey/list', component: SurveysListComponent },
+  {path: 'survey/add', component: SurveysAddComponent },
+  {path: 'survey/edit/:id', component: SurveysEditComponent },
 
 ];
 
