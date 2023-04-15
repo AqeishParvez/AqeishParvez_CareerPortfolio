@@ -21,6 +21,7 @@ constructor(
 
 ngOnInit(): void {
   this.isLoggedIn = !!this.tokenStorageService.getToken();
+  console.log(this.isLoggedIn);
   this.surveyService.getSurveysList().subscribe({
     next: data =>{
       this.surveys = data.surveys,

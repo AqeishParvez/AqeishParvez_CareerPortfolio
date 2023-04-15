@@ -14,13 +14,14 @@ import { ContactComponent } from './content/contact/contact.component';
 import { LoginComponent } from './content/auth/login/login.component';
 import { RegisterComponent } from './content/auth/register/register.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { SurveyCreatorComponent } from './content/survey-creator/survey-creator.component';
 import { SurveyCreatorWidgetComponent } from './content/survey-creator-widget/survey-creator-widget.component';
 import { SurveyListComponent } from './content/survey-list/survey-list.component';
 import { SurveysAddComponent } from './content/surveys/add/add.component';
 import { SurveysEditComponent } from './content/surveys/edit/edit.component';
 import { SurveysListComponent } from './content/surveys/list/list.component';
+import { AuthInterceptor } from './_helper/auth.interceptor';
 
 
 @NgModule({
@@ -49,7 +50,9 @@ import { SurveysListComponent } from './content/surveys/list/list.component';
     AppRoutingModule,
     SurveyCreatorModule
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
