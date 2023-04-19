@@ -9,6 +9,7 @@ const httpOptions = {
   headers: new HttpHeaders({'Content-Type' : 'application/json'})
 }
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -18,7 +19,8 @@ export class SurveysService {
 
   //Get List
   getSurveysList(): Observable<any> {
-    return this.httpClient.get(SURVEY_API+'list', httpOptions);
+    console.log("Entering getSurveysList");
+    return this.httpClient.get<any>(SURVEY_API+'list', httpOptions);
   }
 
   //Get One
@@ -45,3 +47,5 @@ export class SurveysService {
   }
 
 }
+
+

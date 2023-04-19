@@ -123,12 +123,12 @@
   dependencies:
     tslib "^2.3.0"
 
-"@angular/cdk@^12.0.0":
-  version "12.0.0"
-  resolved "https://registry.npmjs.org/@angular/cdk/-/cdk-12.0.0.tgz"
-  integrity sha512-Ij1wNlufbwH2R3zVwkiJgrI0Oc4+yuveEFWMnckcZ7t6E3drmeS1/YeHSbYlWau+fglWs7LtJWC4dEIpGymvzg==
+"@angular/cdk@^12.2.13":
+  version "12.2.13"
+  resolved "https://registry.npmjs.org/@angular/cdk/-/cdk-12.2.13.tgz"
+  integrity sha512-zSKRhECyFqhingIeyRInIyTvYErt4gWo+x5DQr0b7YLUbU8DZSwWnG4w76Ke2s4U8T7ry1jpJBHoX/e8YBpGMg==
   dependencies:
-    tslib "^2.1.0"
+    tslib "^2.2.0"
   optionalDependencies:
     parse5 "^5.0.0"
 
@@ -1178,10 +1178,10 @@
   resolved "https://registry.npmjs.org/@discoveryjs/json-ext/-/json-ext-0.5.7.tgz"
   integrity sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==
 
-"@esbuild/win32-x64@0.17.8":
+"@esbuild/darwin-arm64@0.17.8":
   version "0.17.8"
-  resolved "https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.17.8.tgz"
-  integrity sha512-1iuezdyDNngPnz8rLRDO2C/ZZ/emJLb72OsZeqQ6gL6Avko/XCXZw+NuxBSNhBAP13Hie418V7VMt9et1FMvpg==
+  resolved "https://registry.npmjs.org/@esbuild/darwin-arm64/-/darwin-arm64-0.17.8.tgz"
+  integrity sha512-ghAbV3ia2zybEefXRRm7+lx8J/rnupZT0gp9CaGy/3iolEXkJ6LYRq4IpQVI9zR97ID80KJVoUlo3LSeA/sMAg==
 
 "@gar/promisify@^1.1.3":
   version "1.1.3"
@@ -3048,6 +3048,11 @@ fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
   integrity sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==
+
+fsevents@~2.3.2:
+  version "2.3.2"
+  resolved "https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz"
+  integrity sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
 
 function-bind@^1.1.1:
   version "1.1.1"
@@ -5537,24 +5542,24 @@ survey-angular-ui@^1.9.80:
   dependencies:
     tslib "^2.3.0"
 
-survey-core@1.9.80:
-  version "1.9.80"
-  resolved "https://registry.npmjs.org/survey-core/-/survey-core-1.9.80.tgz"
-  integrity sha512-8ZDNtUtQyfmGKLu/l6JIXhurLPXc7sSoSKj7zXrud0z4jAT7bBiFjLEK8Jz2rBDGhe3TvdA3lFOptK/rzvo++w==
+survey-core@^1.9.83, survey-core@1.9.83:
+  version "1.9.83"
+  resolved "https://registry.npmjs.org/survey-core/-/survey-core-1.9.83.tgz"
+  integrity sha512-jylZ9CM5oVQ4xpSeJ62Z9dyQj8GA7Le0Ji6waB4qZAQm6B8wNArYX+xXhS1mX8KfnIf2/DCVT8YvzCdaRBWOaw==
 
-survey-creator-angular@^1.9.80:
-  version "1.9.80"
-  resolved "https://registry.npmjs.org/survey-creator-angular/-/survey-creator-angular-1.9.80.tgz"
-  integrity sha512-kc8qgCmJ4pCaKnf2Vk2ofORcHoJ5S9+BcO/O/6YwJOZQoc7S5U5ARRa7yn7KJwzSA2IudvhPtjyebaOiizYfBA==
+survey-creator-angular@^1.9.83:
+  version "1.9.83"
+  resolved "https://registry.npmjs.org/survey-creator-angular/-/survey-creator-angular-1.9.83.tgz"
+  integrity sha512-MxcseQNfZ4amRG3bRtGkCW+mjmobTVHB2ScxS9owj4jQ87vpiHKq48lQLyDD87I4jx9HnyMJph7sUyXTBzsgdQ==
   dependencies:
     tslib "^2.2.0"
 
-survey-creator-core@^1.9.80:
-  version "1.9.80"
-  resolved "https://registry.npmjs.org/survey-creator-core/-/survey-creator-core-1.9.80.tgz"
-  integrity sha512-2nTRE1DF83XBFOtaA98fHW0HJKYlKgFejlN6pf1C3MEm8OhNOQY/b9cG6pDUw6TK0+J2yn4clPGvAr+EIFX9/w==
+survey-creator-core@^1.9.83:
+  version "1.9.83"
+  resolved "https://registry.npmjs.org/survey-creator-core/-/survey-creator-core-1.9.83.tgz"
+  integrity sha512-CUsuJwi5PeSsC4sTEoY3UPwYZ2W0cM3vJjRNasAHR0fNige/5IVEo46WcXf5oKp4WNmlfnQqOquivsEZINkt2w==
   dependencies:
-    survey-core "1.9.80"
+    survey-core "1.9.83"
 
 symbol-observable@4.0.0:
   version "4.0.0"

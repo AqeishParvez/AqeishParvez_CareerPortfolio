@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { SurveysService } from 'src/app/services/surveys.service';
 import { TokenStorageService } from 'src/app/services/token-storage.service';
+import { ISurvey } from '../survey';
 
 @Component({
   selector: 'survey-list',
@@ -25,6 +26,7 @@ ngOnInit(): void {
   this.surveyService.getSurveysList().subscribe({
     next: data =>{
       this.surveys = data.surveys,
+      console.log(data);
       this.hasError = false;
     },
     error: err => {
@@ -32,6 +34,7 @@ ngOnInit(): void {
     }
     
   })
+  
 }
 
 editSurvey(id: string):void{
