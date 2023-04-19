@@ -1,48 +1,42 @@
 <div class="container-fluid">
-    <h1>Contact</h1>
-  
-    <!-- Adding a row to have two columns. One that will hold the form where the user's message and email address go
-    The other where the business card with my contact information and logo is. The code for these was copied from bootstrap
-    The message form is not fully functional and just allows user to enter data that doesn't do anything -->
-    <div class="row g-3">
-      <div class="col">
-        <div class="mb-3">
-          <label for="inputEmail" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com">
+    <h1>Contact Us</h1>
+    <p>If you have any questions or concerns, please don't hesitate to get in touch with us. You can reach us using the contact information below.</p>
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Safari Developers</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item"><i class="fas fa-map-marker-alt"></i> 175 Safari Street, Toronto, ON M5V 3H5</li>
+                        <li class="list-group-item"><i class="fas fa-phone-alt"></i> (437) 111-1111</li>
+                        <li class="list-group-item"><i class="fas fa-envelope"></i> safaridevelopers@notsetup.com</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="mb-3">
-          <label for="inputMessage" class="form-label">Type Your Message Below</label>
-          <textarea class="form-control" id="inputMessage" rows="3"></textarea>
-          <button class="btn btn-primary" onclick="submitFunction(inputMessage, inputEmail)" type="submit">Submit</button>
-  
-          <!-- Temporary function to stub the submit button function for email message -->
-          <script>
-           function submitFunction(inputMessage: HTMLInputElement, inputEmail: HTMLInputElement): void {
-             document.getElementById("inputMessage").value = "Your message has been sent!";
-             document.getElementById("inputEmail").value = "";
-            }
-
-          </script>
-  
-          <a class="btn btn-primary" href="/home" role="button">Return To Home Page</a>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Contact Form</h5>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
-      <br>
-      <div class="col">
-        <div class="card" style="width: 18rem;">
-          <img src="../../assets/img/Logo.gif" class="card-img-top" alt="Logo">
-          <div class="card-body">
-            <h5 class="card-title">Safari Developers</h5>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Address: 175 Safari Street</li>
-            <li class="list-group-item">Phone: (437) 111-111</li>
-            <li class="list-group-item">Email: safaridevelopers@notsetup.com</li>
-          </ul>
-        </div>
-      </div>
     </div>
-  
-  </div>
-  <br><br>
-  
+    <a class="btn btn-primary" href="/home" role="button">Return To Home Page</a>
+</div>
