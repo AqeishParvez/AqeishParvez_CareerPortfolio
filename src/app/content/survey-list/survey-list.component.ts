@@ -43,22 +43,27 @@ export class SurveyListComponent {
     // });
   }
   public removeSurvey(_id: string) {
-     this.surveyCreators.forEach(function (value){
-      console.log(value.id);
-     })
+      if(this.isLoggedIn==false){
+      alert("Access Restricted: This action requires login\nPlease login or register to continue")
+      this.router.navigate(["/login"]);
+      }else{
+        this.surveyCreators.forEach(function (value){
+          console.log(value.id);
+        })
 
-    this.surveyService.deleteSurvey(_id)
-    .subscribe({
-      next: data => {
-        window.location.reload();
-      },
-      error: err => {
-        this.hasError = true;
+        this.surveyService.deleteSurvey(_id)
+        .subscribe({
+          next: data => {
+            window.location.reload();
+          },
+          error: err => {
+            this.hasError = true;
+          }
+        })
+        // deleteSurvey(id, (currentItems) => {
+        //   this.items = currentItems;
+        // });
       }
-    })
-    // deleteSurvey(id, (currentItems) => {
-    //   this.items = currentItems;
-    // });
   }
   ngOnInit() {
     this.isLoggedIn = !!this.tokenStorageService.getToken();

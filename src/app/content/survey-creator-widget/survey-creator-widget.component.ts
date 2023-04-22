@@ -33,7 +33,7 @@ export class SurveyCreatorWidgetComponent implements OnInit {
     this.isLoggedIn = !!this.tokenStorageService.getToken();
 
     if(this.isLoggedIn==false){
-    alert("Restricted Access: Please login to edit surveys\nThank you!")
+    alert("Access Restricted: This action requires login\nPlease login or register to continue")
     this.router.navigate(["/login"]);
     }
     const id: string = this.route.snapshot.queryParams["id"];
