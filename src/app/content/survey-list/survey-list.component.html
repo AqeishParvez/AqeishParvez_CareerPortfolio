@@ -1,13 +1,23 @@
-<div class="survey-list" *ngIf="isLoggedIn">
-    <ul *ngFor="let item of items">
+<div class="survey-list">
+    <ul *ngFor="let survey of surveyCreators">
         <li key={item.id}>
-            <a [routerLink]="['/edit-survey']" [queryParams]="{ id: item._id }">{{item.name}}</a>
-            <a class="edit-link" [routerLink]="['/edit-survey']" *ngIf="isLoggedIn" [queryParams]="{ id: item._id }">
+            <a [routerLink]="['/edit-survey']" [queryParams]="{ id: survey._id }">{{survey.name}}</a>
+            <a class="run-link" [routerLink]="['/run-survey']" [queryParams]="{ id: survey._id }">
+              <button type="button" class="btn btn--primary">
+                Run
+              </button>
+            </a>
+            <a class="edit-link" [routerLink]="['/edit-survey']" [queryParams]="{ id: survey._id }">
               <button type="button" class="btn btn--primary">
                 Edit
               </button>
             </a>
-            <button type="button" class="btn btn--danger" *ngIf="isLoggedIn" (click)="removeSurvey(item._id)">Remove</button>
+            <a class="edit-link" [routerLink]="['/survey-results']" [queryParams]="{ id: survey._id }">
+              <button type="button" class="btn btn--primary">
+                Results
+              </button>
+            </a>
+            <button type="button" class="btn btn--danger" *ngIf="isLoggedIn" (click)="removeSurvey(survey._id)">Remove</button>
           </li>
     </ul>
     <button class="add-btn" type="button" (click)="addNewSurvey()">Add New Survey</button>

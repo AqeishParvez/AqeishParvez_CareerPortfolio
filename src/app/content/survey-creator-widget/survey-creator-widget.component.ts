@@ -24,12 +24,18 @@ export class SurveyCreatorWidgetComponent implements OnInit {
   constructor(
     private tokenStorageService: TokenStorageService,
     public surveyService: SurveysService,
-    private route: ActivatedRoute) {
+    private route: ActivatedRoute,
+    private router: Router) {
 
   }
 
   ngOnInit() {
     this.isLoggedIn = !!this.tokenStorageService.getToken();
+
+    if(this.isLoggedIn==false){
+    alert("Restricted Access: Please login to edit surveys\nThank you!")
+    this.router.navigate(["/login"]);
+    }
     const id: string = this.route.snapshot.queryParams["id"];
     console.log("Id from survey creator widget: "+id);
     this.creator = new SurveyCreatorModel({ showLogicTab: false })

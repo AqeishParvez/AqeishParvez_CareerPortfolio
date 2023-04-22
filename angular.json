@@ -53,7 +53,8 @@
             "styles": [
               "src/styles.css",
               "node_modules/survey-core/defaultV2.min.css",
-              "node_modules/survey-creator-core/survey-creator-core.min.css"
+              "node_modules/survey-creator-core/survey-creator-core.min.css",
+              "node_modules/survey-analytics/survey.analytics.min.css"
             ],
             "scripts": []
           },

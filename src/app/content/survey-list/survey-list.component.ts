@@ -1,56 +1,9 @@
 import { Component } from "@angular/core";
 import { Router } from "@angular/router";
 import { TokenStorageService } from "src/app/services/token-storage.service";
-import { createSurvey, deleteSurvey, getSurveyItems } from "../../services/web-data-service";
 import { SurveysService } from "src/app/services/surveys.service";
 import { ISurvey } from "../surveys/survey";
-
-var defaultSurveyListItem = {
-  name: "New Survey",
-  json: {
-    "title": "New Survey",
-    "logoPosition": "right",
-    "pages": [
-     {
-      "name": "page1",
-      "elements": [
-       {
-        "type": "text",
-        "name": "question1",
-        "title": "First Question"
-       },
-       {
-        "type": "text",
-        "name": "question2",
-        "title": "Second Question"
-       },
-       {
-        "type": "text",
-        "name": "question3",
-        "title": "Third Question"
-       }
-      ],
-      "title": "First Page"
-     },
-     {
-      "name": "page2",
-      "elements": [
-       {
-        "type": "text",
-        "name": "question4",
-        "title": "First Question"
-       },
-       {
-        "type": "text",
-        "name": "question5",
-        "title": "Second Question"
-       }
-      ],
-      "title": "Second Page"
-     }
-    ]
-   }
-};
+import { defaultSurveyListItem } from "../surveys/survey";
 
 @Component({
   templateUrl: "./survey-list.component.html",
@@ -65,9 +18,10 @@ export class SurveyListComponent {
   constructor(
     private tokenStorageService : TokenStorageService,
     private surveyService : SurveysService,
-    private router: Router) { }
+    private router: Router,
+    ) { }
   
-  public items: Array<ISurvey> = []
+  public surveyCreators: Array<ISurvey> = [];
 
   public addNewSurvey() {
     this.surveyService.addSurvey(defaultSurveyListItem)
@@ -89,7 +43,7 @@ export class SurveyListComponent {
     // });
   }
   public removeSurvey(_id: string) {
-     this.items.forEach(function (value){
+     this.surveyCreators.forEach(function (value){
       console.log(value.id);
      })
 
@@ -109,13 +63,14 @@ export class SurveyListComponent {
   ngOnInit() {
     this.isLoggedIn = !!this.tokenStorageService.getToken();
 
-    if(this.isLoggedIn==false){
-      this.router.navigate(["/login"]);
-    }
+    // if(this.isLoggedIn==false){
+    //   this.router.navigate(["/login"]);
+    // }
 
     this.surveyService.getSurveysList().subscribe({
       next: data =>{
-        this.items = data.surveys,
+        console.log("This line of code ran");
+        this.surveyCreators = data.surveys,
         this.hasError = false;
       },
       error: err => {

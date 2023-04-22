@@ -13,6 +13,8 @@ import { SurveyListComponent } from './content/survey-list/survey-list.component
 import { SurveysListComponent } from './content/surveys/list/list.component';
 import { SurveysAddComponent } from './content/surveys/add/add.component';
 import { SurveysEditComponent } from './content/surveys/edit/edit.component';
+import { SurveyRunComponent } from './content/survey-run-component/survey-run-component.component';
+import { SurveyDashboardComponent } from './content/survey-dashboard/survey-dashboard.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch:'full'},
@@ -26,9 +28,11 @@ const routes: Routes = [
   {path: 'survey-creator', component: SurveyCreatorComponent },
   {path: 'survey-list', component: SurveyListComponent },
   {path: 'edit-survey', component: SurveyCreatorWidgetComponent },
+  {path: 'run-survey', component: SurveyRunComponent},
   {path: 'survey/list', component: SurveysListComponent },
   {path: 'survey/add', component: SurveysAddComponent },
   {path: 'survey/edit/:id', component: SurveysEditComponent },
+  {path: 'survey-results', component: SurveyDashboardComponent},
 
 ];
 

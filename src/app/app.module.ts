@@ -22,7 +22,9 @@ import { SurveysAddComponent } from './content/surveys/add/add.component';
 import { SurveysEditComponent } from './content/surveys/edit/edit.component';
 import { SurveysListComponent } from './content/surveys/list/list.component';
 import { AuthInterceptor } from './_helper/auth.interceptor';
-import { SurveyCreatorModel } from 'creator-base';
+import { SurveyModule } from 'survey-angular-ui';
+import { SurveyRunComponent } from './content/survey-run-component/survey-run-component.component';
+import { SurveyDashboardComponent } from './content/survey-dashboard/survey-dashboard.component';
 
 
 @NgModule({
@@ -43,6 +45,8 @@ import { SurveyCreatorModel } from 'creator-base';
     SurveysAddComponent,
     SurveysEditComponent,
     SurveysListComponent,
+    SurveyRunComponent,
+    SurveyDashboardComponent,
   ],
   imports: [
     HttpClientModule,
@@ -50,10 +54,13 @@ import { SurveyCreatorModel } from 'creator-base';
     BrowserModule,
     AppRoutingModule,
     SurveyCreatorModule,
+    SurveyModule
+  
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
     SurveyCreatorModule,
+    SurveyModule
   ],
   bootstrap: [AppComponent]
 })
