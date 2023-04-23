@@ -24,6 +24,10 @@ export class SurveyListComponent {
   public surveyCreators: Array<ISurvey> = [];
 
   public addNewSurvey() {
+    if(this.isLoggedIn==false){
+      alert("Access Restricted: This action requires login\nPlease login or register to continue")
+      this.router.navigate(["/login"]);
+      }else{
     this.surveyService.addSurvey(defaultSurveyListItem)
     .subscribe({
       next: data => {
@@ -41,6 +45,7 @@ export class SurveyListComponent {
     // createSurvey((newItem) => {
     //   this.router.navigate(["/editsurvey"], { queryParams: { id: newItem.id.toString() } });
     // });
+    }
   }
   public removeSurvey(_id: string) {
       if(this.isLoggedIn==false){
