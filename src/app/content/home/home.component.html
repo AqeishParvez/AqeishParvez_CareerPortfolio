@@ -1,11 +1,41 @@
 <div class="container-fluid">
-    <h1>Home</h1>
-    <!-- Adding welcome message and a button that takes user to the about page -->
-
-    <h2>Welcome to our survey site!</h2>
-    <p>Please take a moment to fill out our survey and share your feedback with us.</p>
-    <br>
-    <a router-link ="/home" class="btn btn-primary" href="/about" role="button">About Us</a>
-    <br>
-
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Welcome to our survey site!</h1>
+            <p>Please take a moment to fill out our survey and share your feedback with us.</p>
+            <a href="/survey-list" class="btn btn-primary" role="button">Start Survey</a>
+            <p>If you would like to create a survey, feel free to make an account with us today!</p>
+            <h3>Featured Surveys</h3>
+            <ul>
+                <li><a href="/survey-list">Survey 1</a></li>
+                <li><a href="/survey-list">Survey 2</a></li>
+                <li><a href="/survey-list">Survey 3</a></li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h2>About Us</h2>
+            <p>Learn more about Safari Developers, the startup web-application development company that operates locally but provides software solutions globally.</p>
+            <a href="/about" class="btn btn-secondary" role="button">Read More</a>
+            <h3>Testimonials</h3>
+            <p>"I've been using Safari Developers' survey tool for months now and it's been a game-changer for my business. Highly recommended!" - Jane Doe</p>
+            <h3>Connect with us</h3>
+            <ul>
+                <li><a href="https://twitter.com/SafariDevs">Twitter</a></li>
+                <li><a href="https://www.facebook.com/SafariDevs">Facebook</a></li>
+                <li><a href="https://www.linkedin.com/company/safari-developers">LinkedIn</a></li>
+            </ul>
+            <h3>FAQs</h3>
+            <ul>
+                <li><strong>How do I create a survey?</strong> To create a survey, simply sign up for an account and follow the prompts on the survey creation page.</li>
+                <li><strong>Is my data secure?</strong> Yes, we take data security very seriously and use the latest encryption technology to protect your information.</li>
+                <li><strong>How many responses can I collect?</strong> With a free account, you can collect up to 100 responses per survey. For unlimited responses, consider upgrading to a premium account.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <a href="/register" class="btn btn-primary" role="button">Sign Up Now</a>
+        </div>
+    </div>
 </div>
+<br><br><br>
