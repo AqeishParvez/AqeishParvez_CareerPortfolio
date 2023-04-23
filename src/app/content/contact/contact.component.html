@@ -14,6 +14,17 @@
                     </ul>
                 </div>
             </div>
+            <br>
+            <div class="row-md-20">
+                <br><br><br><br><br><br>
+                <a class="btn btn-secondary" [routerLink]="['/home']" role="button">
+                    <i class="fas fa-plus-circle"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
+                        <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1z"/>
+                    </svg>
+                    Return To Home
+                </a>
+            </div>
         </div>
         <div class="col-md-6">
             <div class="card">
@@ -32,12 +43,17 @@
                             <label for="message">Message</label>
                             <textarea class="form-control" id="message" rows="5" required></textarea>
                         </div>
-                        <button type="submit" (click)="sendButtonClick()" class="btn btn-primary">Send</button>
+                        <br>
+                        <button type="submit" (click)="sendButtonClick()" class="btn btn-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+                                <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+                              </svg>
+                            Send Message
+                        </button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <a class="btn btn-primary" href="/home" role="button">Return To Home Page</a>
 </div>
 <br><br><br>
