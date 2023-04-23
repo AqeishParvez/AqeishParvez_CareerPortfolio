@@ -31,14 +31,12 @@ export class SurveyCreatorWidgetComponent implements OnInit {
 
   ngOnInit() {
     this.isLoggedIn = !!this.tokenStorageService.getToken();
+    const id: string = this.route.snapshot.queryParams["id"];
 
     if(this.isLoggedIn==false){
     alert("Access Restricted: This action requires login\nPlease login or register to continue")
     this.router.navigate(["/login"]);
-    }
-    const id: string = this.route.snapshot.queryParams["id"];
-
-    if(id=="64447f23106a894b51afafe2" || id=="6444816d106a894b51afb068"){
+    }else if(id=="64447f23106a894b51afafe2" || id=="6444816d106a894b51afb068"){
       {
         alert("Access Restricted: Featured survey cannot be edited");
         this.router.navigate(["/survey-list"]);

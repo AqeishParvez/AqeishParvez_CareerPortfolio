@@ -56,19 +56,19 @@
                               Run
                             </a>
                           </td>
-                          <td class = "text-center col-1" [routerLink]="['/edit-survey']" [queryParams]="{ id: survey._id }">
-                            <a class="btn btn-warning">
-                              Edit
-                            </a>
-                          </td>
                           <td class = "text-center col-1" [routerLink]="['/survey-results']" [queryParams]="{ id: survey._id }">
                             <a class="btn btn-success" >
                                 Results
                             </a>
                           </td>
+                          <td class = "text-center col-1" [routerLink]="['/edit-survey']" [queryParams]="{ id: survey._id }">
+                            <a>
+                              <button class="btn btn-warning" [disabled]="!isLoggedIn">Edit</button>
+                            </a>
+                          </td>
                           <td class = "text-center col-1" (click)="removeSurvey(survey._id)">
-                            <a class="btn btn-danger">
-                              Remove
+                            <a>
+                              <button class="btn btn-danger" [disabled]="!isLoggedIn">Remove</button>
                             </a>
                           </td>
                       </tr>
