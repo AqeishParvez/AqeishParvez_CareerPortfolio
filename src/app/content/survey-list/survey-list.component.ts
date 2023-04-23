@@ -51,7 +51,13 @@ export class SurveyListComponent {
       if(this.isLoggedIn==false){
       alert("Access Restricted: This action requires login\nPlease login or register to continue")
       this.router.navigate(["/login"]);
-      }else{
+      }else if(_id=="64447f23106a894b51afafe2" || _id=="6444816d106a894b51afb068"){
+        {
+          alert("Access Restricted: Featured survey cannot be deleted");
+          this.router.navigate(["/survey-list"]);
+        }
+      }
+      else{
         this.surveyCreators.forEach(function (value){
           console.log(value.id);
         })

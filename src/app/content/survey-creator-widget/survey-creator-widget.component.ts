@@ -37,6 +37,14 @@ export class SurveyCreatorWidgetComponent implements OnInit {
     this.router.navigate(["/login"]);
     }
     const id: string = this.route.snapshot.queryParams["id"];
+
+    if(id=="64447f23106a894b51afafe2" || id=="6444816d106a894b51afb068"){
+      {
+        alert("Access Restricted: Featured survey cannot be edited");
+        this.router.navigate(["/survey-list"]);
+      }
+    }
+
     console.log("Id from survey creator widget: "+id);
     this.creator = new SurveyCreatorModel({ showLogicTab: false })
     this.creator.isAutoSave = true;
