@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
 sendButtonClick() {
-  alert("Your message was succesfully sent")
+  alert("This form is currently not operational. Kindly use the email address and phone number provided to contact me.")
 }
 
 }

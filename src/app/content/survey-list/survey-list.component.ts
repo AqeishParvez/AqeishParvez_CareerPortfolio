@@ -83,17 +83,22 @@ export class SurveyListComponent {
     //   this.router.navigate(["/login"]);
     // }
 
-    this.surveyService.getSurveysList().subscribe({
-      next: data =>{
-        console.log("This line of code ran");
-        this.surveyCreators = data.surveys,
-        this.hasError = false;
-      },
-      error: err => {
-        this.hasError = true;
-      }
-      
-    })
+    if(this.isLoggedIn==false){
+      alert("Access Restricted: You must login to view surveys page\nPlease login or register to continue")
+      this.router.navigate(["/login"]);
+      }else{
+      this.surveyService.getSurveysList().subscribe({
+        next: data =>{
+          console.log("This line of code ran");
+          this.surveyCreators = data.surveys,
+          this.hasError = false;
+        },
+        error: err => {
+          this.hasError = true;
+        }
+        
+      })
+    }
 
     // getSurveyItems((currentItems) => {
     //   this.items = currentItems;
