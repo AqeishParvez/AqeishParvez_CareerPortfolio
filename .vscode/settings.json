@@ -2,5 +2,7 @@
     "appService.zipIgnorePattern": [
         "node_modules{,/**}",
         ".vscode{,/**}"
-    ]
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/07e957ce-f160-4dfd-9a95-2298f9916c75/resourceGroups/COMP229-W2023/providers/Microsoft.Web/sites/AqeishParvez-Portfolio",
+    "appService.deploySubpath": "dist/aqeish-parvez-portfolio"
 }
