@@ -1,11 +1,13 @@
 <div class="container-fluid">
     <h1>Contact Me</h1>
-    <a class="text-warning text-decoration-none">
+    <div class="alert alert-warning d-flex align-items-center" role="alert">
         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="orange" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
             <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
           </svg>
-        The contact form below is still a work in progress and is currently unoperational. Kindly contact me through contact information listed below.
-    </a>
+        <div>
+          <span class="fw-bolder">Note:</span> The contact form below is still a work in progress and is currently unoperational. Kindly contact me through contact information listed below.
+        </div>
+    </div>
     <br>
     <br>
     <div class="row">
@@ -39,7 +41,7 @@
                             <textarea class="form-control" id="message" rows="5" required></textarea>
                         </div>
                         <br>
-                        <button type="submit" (click)="sendButtonClick()" class="btn btn-primary">
+                        <button type="submit" (click)="sendButtonClick()" class="btn btn-dark">
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
                                 <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
                               </svg>
@@ -50,7 +52,7 @@
             </div>
             <br>
             <div class="row-md-20 text-center">
-                <a class="btn btn-secondary" [routerLink]="['/home']" role="button">
+                <a class="btn btn-dark" [routerLink]="['/home']" role="button">
                     <i class="fas fa-plus-circle"></i>
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
                         <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1z"/>
