@@ -25,7 +25,6 @@ import { AuthInterceptor } from './_helper/auth.interceptor';
 import { SurveyModule } from 'survey-angular-ui';
 import { SurveyRunComponent } from './content/survey-run-component/survey-run-component.component';
 import { SurveyDashboardComponent } from './content/survey-dashboard/survey-dashboard.component';
-import { ReactiveFormsModule } from '@angular/forms';  
 
 
 @NgModule({
@@ -55,8 +54,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     SurveyCreatorModule,
-    SurveyModule,
-    ReactiveFormsModule
+    SurveyModule
   
   ],
   providers: [
